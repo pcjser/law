@@ -1,13 +1,13 @@
 <view class="index-month-page">
-  <image class="index-month-content01" src="http://47.105.60.162:81/index-month-content01.png" />
-  <image class="index-month-content02" src="http://47.105.60.162:81/index-month-content02.png" />
-  <image class="index-month-title03" src="http://47.105.60.162:81/title-wmdyj.png" />
-  <image class="index-month-content03" src="http://47.105.60.162:81/index-month-content03.png" />
-  <image class="index-month-title04" src="http://47.105.60.162:81/title-fwlc.png" />
-  <image class="index-month-content04" src="http://47.105.60.162:81/index-month-content04.png" />
-  <image class="index-month-title05" src="http://47.105.60.162:81/title-hxcp.png" />
-  <image class="index-month-content05-01" src="http://47.105.60.162:81/index-month-content05-01.png" />
-  <image class="index-month-content05-02" src="http://47.105.60.162:81/index-month-content05-02.png" />
+  <image class="index-month-content01" src="https://api.lawbing.com.cn/images/index-month-content01.png" />
+  <image class="index-month-content02" src="https://api.lawbing.com.cn/images/index-month-content02.png" />
+  <image class="index-month-title03" src="https://api.lawbing.com.cn/images/title-wmdyj.png" />
+  <image class="index-month-content03" src="https://api.lawbing.com.cn/images/index-month-content03.png" />
+  <image class="index-month-title04" src="https://api.lawbing.com.cn/images/title-fwlc.png" />
+  <image class="index-month-content04" src="https://api.lawbing.com.cn/images/index-month-content04.png" />
+  <image class="index-month-title05" src="https://api.lawbing.com.cn/images/title-hxcp.png" />
+  <image class="index-month-content05-01" src="https://api.lawbing.com.cn/images/index-month-content05-01.png" />
+  <image class="index-month-content05-02" src="https://api.lawbing.com.cn/images/index-month-content05-02.png" />
   <view class="content-form">
     <uform show-id="true"></uform>
   </view>

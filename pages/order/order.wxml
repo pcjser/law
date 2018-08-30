@@ -10,7 +10,7 @@
         <view class="list-item">
           <text class="item-title">某某某活动</text>
           <text class="item-time">2018-5-20 12:20:3</text>
-          <image class="item-enter" src="http://47.105.60.162:81/enter.png" />
+          <image class="item-enter" src="https://api.lawbing.com.cn/images/enter.png" />
         </view>
       </navigator>
     </view>

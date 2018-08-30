@@ -1,22 +1,22 @@
 <view class="index-lawyer-page">
   <view class="page-top">
-    <image class="lawyer-bg" src="http://47.105.60.162:81/index-lawyer-bg.png" />
+    <image class="lawyer-bg" src="https://api.lawbing.com.cn/images/index-lawyer-bg.png" />
   </view>
   <view class="page-content">
-    <image class="content-ad" src="http://47.105.60.162:81/index-lawyer-ad.png" />
+    <image class="content-ad" src="https://api.lawbing.com.cn/images/index-lawyer-ad.png" />
     <view class="content-form">
       <uform></uform>
     </view>
     <view class="content-detail">
-      <image class="index-lawyer-intro" src="http://47.105.60.162:81/index-lawyer-intro.png" />
-      <image class="index-lawyer-title index-lawyer-title01" src="http://47.105.60.162:81/title-fwfw.png"></image>
-      <image class="index-lawyer-content01" src="http://47.105.60.162:81/index-lawyer-content01.png"></image>
-      <image class="index-lawyer-title index-lawyer-title02" src="http://47.105.60.162:81/title-fwlx.png"></image>
-      <image class="index-lawyer-content02" src="http://47.105.60.162:81/index-lawyer-content02.png"></image>
-      <image class="index-lawyer-title index-lawyer-title03" src="http://47.105.60.162:81/title-fwsm.png"></image>
-      <image class="index-lawyer-content03" src="http://47.105.60.162:81/index-lawyer-content03.png"></image>
-      <image class="index-lawyer-title index-lawyer-title04" src="http://47.105.60.162:81/title-shfw.png"></image>
-      <image class="index-lawyer-content04" src="http://47.105.60.162:81/index-lawyer-content04.png"></image>
+      <image class="index-lawyer-intro" src="https://api.lawbing.com.cn/images/index-lawyer-intro.png" />
+      <image class="index-lawyer-title index-lawyer-title01" src="https://api.lawbing.com.cn/images/title-fwfw.png"></image>
+      <image class="index-lawyer-content01" src="https://api.lawbing.com.cn/images/index-lawyer-content01.png"></image>
+      <image class="index-lawyer-title index-lawyer-title02" src="https://api.lawbing.com.cn/images/title-fwlx.png"></image>
+      <image class="index-lawyer-content02" src="https://api.lawbing.com.cn/images/index-lawyer-content02.png"></image>
+      <image class="index-lawyer-title index-lawyer-title03" src="https://api.lawbing.com.cn/images/title-fwsm.png"></image>
+      <image class="index-lawyer-content03" src="https://api.lawbing.com.cn/images/index-lawyer-content03.png"></image>
+      <image class="index-lawyer-title index-lawyer-title04" src="https://api.lawbing.com.cn/images/title-shfw.png"></image>
+      <image class="index-lawyer-content04" src="https://api.lawbing.com.cn/images/index-lawyer-content04.png"></image>
     </view>
   </view>
 </view>

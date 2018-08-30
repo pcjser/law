@@ -1,4 +1,4 @@
-const BASEURL = 'https://www.lawbing.com.cn'
+const BASEURL = 'https://api.lawbing.com.cn'
 
 const formatTime = date => {
   const year = date.getFullYear()
@@ -32,20 +32,29 @@ const postForm = (params, cb) => {
 // 发送验证码
 const sendCode = (params, cb) => {
   wx.request({
-    url: 'https://47.105.60.162:8083/bes/login/sendVerificationCode',
+    url: `${BASEURL}/auth/sms/send`,
     data: params,
+    method: 'POST',
     success: res => {
-      cb()
+      const { data: { success } } = res;
+      if (success) {
+        cb()
+      } else {
+        wx.showToast({
+          title: "验证码发送失败，请稍后再试",
+          icon: "none"
+        })
+      }
     }
   })
 }
 
 // 用户注册
-const register = (params, cb) => {
-  wx.request({
-    url: `${BASEURL}/auth/register`
-  })
-}
+// const register = (params, cb) => {
+//   wx.request({
+//     url: `${BASEURL}/auth/register`
+//   })
+// }
 
 // 用户登录
 const login = (params, cb) => {
@@ -54,15 +63,32 @@ const login = (params, cb) => {
     data: params,
     method: 'POST',
     success: res => {
-      const token = res.data || 'testToken';
-      wx.showToast({
-        title: "登录成功",
-        icon: "success"
-      })
-      try {
-        wx.setStorageSync('token', token)
-      } catch (e) {}
-      cb(token)
+      const { data: { success, payload } } = res;
+      if (success) {
+        wx.showToast({
+          title: "登录成功",
+          icon: "success"
+        })
+        console.log(res.header["Set-Cookie"])
+        // cb(ses)
+      } else {
+        wx.showToast({
+          title: "登录失败，请稍后再试",
+          icon: "none"
+        })
+      }
+      // console.log(res)
+
+      // wx.setStorageSync("sessionid", res.header["Set-Cookie"])
+      // const token = res.data || 'testToken';
+      // wx.showToast({
+      //   title: "登录成功",
+      //   icon: "success"
+      // })
+      // try {
+      //   wx.setStorageSync('token', token)
+      // } catch (e) {}
+      // cb(token)
     }
   })
 }
@@ -77,7 +103,7 @@ const tokenLogin = (params, cb) => {
       const token = res.data || 'testToken';
       try {
         wx.setStorageSync('token', token)
-      } catch (e) {}
+      } catch (e) { }
       cb(token)
     }
   })

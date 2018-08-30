@@ -1,19 +1,19 @@
 <view class="index-create-page">
-  <image class="index-create-content01" src="http://47.105.60.162:81/index-create-content01.png" />
+  <image class="index-create-content01" src="https://api.lawbing.com.cn/images/index-create-content01.png" />
   <view class="content-form">
     <uform></uform>
   </view>
-  <image class="index-create-title03" src="http://47.105.60.162:81/title-fwhg.png" />
-  <image class="index-create-content03-01" src="http://47.105.60.162:81/index-create-content03-01.png" />
-  <image class="index-create-content03-02" src="http://47.105.60.162:81/index-create-content03-02.png" />
-  <image class="index-create-content03-03" src="http://47.105.60.162:81/index-create-content03-03.png" />
-  <image class="index-create-title04" src="http://47.105.60.162:81/title-fwys.png" />
-  <image class="index-create-content04-01" src="http://47.105.60.162:81/index-create-content04-01.png" />
-  <image class="index-create-content04-02" src="http://47.105.60.162:81/index-create-content04-02.png" />
-  <image class="index-create-content04-03" src="http://47.105.60.162:81/index-create-content04-03.png" />
-  <image class="index-create-content04-04" src="http://47.105.60.162:81/index-create-content04-04.png" />
-  <image class="index-create-title05" src="http://47.105.60.162:81/title-hxcp.png" />
-  <image class="index-create-content05" src="http://47.105.60.162:81/index-create-content05.png" />
-  <image class="index-create-title06" src="http://47.105.60.162:81/title-qtfw.png" />
-  <image class="index-create-content06" src="http://47.105.60.162:81/index-create-content06.png" />
+  <image class="index-create-title03" src="https://api.lawbing.com.cn/images/title-fwhg.png" />
+  <image class="index-create-content03-01" src="https://api.lawbing.com.cn/images/index-create-content03-01.png" />
+  <image class="index-create-content03-02" src="https://api.lawbing.com.cn/images/index-create-content03-02.png" />
+  <image class="index-create-content03-03" src="https://api.lawbing.com.cn/images/index-create-content03-03.png" />
+  <image class="index-create-title04" src="https://api.lawbing.com.cn/images/title-fwys.png" />
+  <image class="index-create-content04-01" src="https://api.lawbing.com.cn/images/index-create-content04-01.png" />
+  <image class="index-create-content04-02" src="https://api.lawbing.com.cn/images/index-create-content04-02.png" />
+  <image class="index-create-content04-03" src="https://api.lawbing.com.cn/images/index-create-content04-03.png" />
+  <image class="index-create-content04-04" src="https://api.lawbing.com.cn/images/index-create-content04-04.png" />
+  <image class="index-create-title05" src="https://api.lawbing.com.cn/images/title-hxcp.png" />
+  <image class="index-create-content05" src="https://api.lawbing.com.cn/images/index-create-content05.png" />
+  <image class="index-create-title06" src="https://api.lawbing.com.cn/images/title-qtfw.png" />
+  <image class="index-create-content06" src="https://api.lawbing.com.cn/images/index-create-content06.png" />
 </view>

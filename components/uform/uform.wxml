@@ -1,5 +1,5 @@
 <view class="user-form">
-  <image class="form-title" src="http://47.105.60.162:81/title-fwrxx.png" />
+  <image class="form-title" src="https://api.lawbing.com.cn/images/title-fwrxx.png" />
   <view class="form-content">
     <view class="input-line">
       <text class="label">服 务 人</text>
@@ -21,7 +21,7 @@
       <input type="text" placeholder-style="color:rgba(255,255,255,0.5)" placeholder="请选择预约时间" disabled="true" value="{{date}}"
       />
       <picker mode="date" bindchange="bindDateChange">
-        <image src="http://47.105.60.162:81/icon-calendar.png" class="icon-calendar" />
+        <image src="https://api.lawbing.com.cn/images/icon-calendar.png" class="icon-calendar" />
       </picker>
     </view>
     <view class="input-line">
@@ -40,11 +40,11 @@
   <view class="form-phone">服务电话：0551-65157175</view>
   <view class="op-group">
     <view class="home" bindtap="goHome">
-      <image src="http://47.105.60.162:81/home.png" />
+      <image src="https://api.lawbing.com.cn/images/home.png" />
       <text>首页</text>
     </view>
     <button class="share" open-type="share">
-      <image src="http://47.105.60.162:81/share.png" />
+      <image src="https://api.lawbing.com.cn/images/share.png" />
       <text>转发</text>
     </button>
     <view class="contact" bindtap="createOrder">下单咨询</view>

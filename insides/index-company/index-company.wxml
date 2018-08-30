@@ -1,22 +1,22 @@
 <view class="index-company-page">
   <view class="service-block">
     <navigator class="link" url="/insides/index-taxation/index-taxation" hover-class="none">
-      <image src="http://47.105.60.162:81/company-service01.png" />
+      <image src="https://api.lawbing.com.cn/images/company-service01.png" />
     </navigator>
   </view>
   <view class="service-block">
     <navigator class="link" url="/insides/index-job/index-job" hover-class="none">
-      <image src="http://47.105.60.162:81/company-service02.png" />
+      <image src="https://api.lawbing.com.cn/images/company-service02.png" />
     </navigator>
   </view>
   <view class="service-block">
     <navigator class="link" url="/insides/index-create/index-create" hover-class="none">
-      <image src="http://47.105.60.162:81/company-service03.png" />
+      <image src="https://api.lawbing.com.cn/images/company-service03.png" />
     </navigator>
   </view>
   <view class="service-block">
     <navigator class="link" url="/insides/index-security/index-security" hover-class="none">
-      <image src="http://47.105.60.162:81/company-service04.png" />
+      <image src="https://api.lawbing.com.cn/images/company-service04.png" />
     </navigator>
   </view>
 </view>

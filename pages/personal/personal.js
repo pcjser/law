@@ -8,7 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    token: null,
+    session: null,
+    init: false,
     showLogin: false,
     phone: null,
     code: null,
@@ -26,10 +27,10 @@ Page({
     wx.setNavigationBarTitle({
       title: '我的'
     })
-    const token = app.globalData.token
-    if (token) {
+    const session = app.globalData.session
+    if (session) {
       this.setData({
-        token: token
+        session: session
       })
     }
   },
@@ -50,17 +51,17 @@ Page({
     }
     if (/^1\d{10}$/.test(this.data.phone)) {
       util.sendCode({
-        userPhone: this.data.phone
+        mobile: this.data.phone
       }, () => {
         wx.showToast({
-          title: "验证码已输入",
-          icon: "none"
+          title: "验证码发送成功",
+          icon: "success"
         })
-        this.setData({
-          code: [1, 2, 3, 4, 5, 6].map(() => {
-            return Math.floor(Math.random() * 10)
-          }).join('')
-        })
+        // this.setData({
+        //   code: [1, 2, 3, 4, 5, 6].map(() => {
+        //     return Math.floor(Math.random() * 10)
+        //   }).join('')
+        // })
         this.startTimer();
       })
     } else {
@@ -114,17 +115,31 @@ Page({
   },
   login: function () {
     const app = getApp();
-    if (this.data.phone && this.data.code && this.data.name) {
-      util.login({
-        userPhone: this.data.phone,
-        verificationCode: this.data.code,
-        name: this.data.name,
-        recommend: this.data.recommend
-      }, token => {
+    let init = false;
+    try {
+      var value = wx.getStorageSync('init')
+      if (value) {
+        init = true;
         this.setData({
-          token: token
+          init: true
         })
-        app.globalData.token = token;
+      }
+    } catch (e) { }
+    if (this.data.phone && this.data.code && (!init && this.data.name)) {
+      util.login({
+        username: this.data.phone,
+        code: this.data.code,
+        realname: this.data.name,
+        recommend: this.data.recommend
+      }, session => {
+        try {
+          wx.setStorageSync('init', true)
+        } catch (e) {
+        }
+        this.setData({
+          session: session
+        })
+        app.globalData.session = session;
         this.closeLogin();
       })
     } else {

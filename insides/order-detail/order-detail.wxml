@@ -4,7 +4,7 @@
       <div class="order-type">找律师</div>
       <div class="order-status">已完成/未服务</div>
     </view>
-    <image class="content-line" src="http://47.105.60.162:81/order-line.png"></image>
+    <image class="content-line" src="https://api.lawbing.com.cn/images/order-line.png"></image>
     <view class="content-main">
       <view class="info-line">姓 名：张三</view>
       <view class="info-line">手机号码：15109894567</view>
