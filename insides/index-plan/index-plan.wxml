@@ -1,0 +1,22 @@
+<view class="index-plan-page">
+  <view class="page-top">
+    <image src="http://47.105.60.162:81/index-plan-bg.png" />
+  </view>
+  <view class="page-color"></view>
+  <view class="page-content">
+    <image class="content-ad" src="http://47.105.60.162:81/index-plan-ad.png" />
+    <view class="content-detail">
+      <image class="index-plan-title01" src="http://47.105.60.162:81/index-plan-title01.png" />
+      <image class="index-plan-content01" src="http://47.105.60.162:81/index-plan-content01.png"></image>
+      <view class="content-form">
+        <uform></uform>
+      </view>
+      <image class="index-plan-title03" src="http://47.105.60.162:81/index-plan-title03.png"></image>
+      <image class="index-plan-content03-01" src="http://47.105.60.162:81/index-plan-content03-01.png"></image>
+      <image class="index-plan-content03-02" src="http://47.105.60.162:81/index-plan-content03-02.png"></image>
+      <image class="index-plan-content03-03" src="http://47.105.60.162:81/index-plan-content03-03.png"></image>
+      <image class="index-plan-content03-04" src="http://47.105.60.162:81/index-plan-content03-04.png"></image>
+      <image class="index-plan-content03-05" src="http://47.105.60.162:81/index-plan-content03-05.png"></image>
+    </view>
+  </view>
+</view>

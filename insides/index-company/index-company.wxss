@@ -1,0 +1,17 @@
+.index-company-page {
+  padding-bottom: 30rpx;
+}
+.index-company-page .link {
+  width: 100%;
+  height: 100%;
+}
+.index-company-page .service-block {
+  width: 690rpx;
+  height: 240rpx;
+  margin: 30rpx auto 0;
+}
+.index-company-page .service-block image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

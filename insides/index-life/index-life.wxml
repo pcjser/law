@@ -1,0 +1,15 @@
+<view class="index-life-page">
+  <image class="index-life-content01" src="http://47.105.60.162:81/index-life-content01.png" />
+  <image class="index-life-content02" src="http://47.105.60.162:81/index-life-content02.png" />
+  <image class="index-life-title03" src="http://47.105.60.162:81/title-bzfw.png" />
+  <image class="index-life-content03" src="http://47.105.60.162:81/index-life-content03.png" />
+  <image class="index-life-title04" src="http://47.105.60.162:81/title-tjyl.png" />
+  <image class="index-life-content04-01" src="http://47.105.60.162:81/index-life-content04-01.png" />
+  <image class="index-life-content04-02" src="http://47.105.60.162:81/index-life-content04-02.png" />
+  <view class="content-form">
+    <uform></uform>
+  </view>
+  <image class="index-life-title06" src="http://47.105.60.162:81/title-fwys.png" />
+  <image class="index-life-content06-01" src="http://47.105.60.162:81/index-life-content06-01.png" />
+  <image class="index-life-content06-02" src="http://47.105.60.162:81/index-life-content06-02.png" />
+</view>

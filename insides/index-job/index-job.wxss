@@ -1,0 +1,57 @@
+.index-job-page {
+  padding-bottom: 178rpx;
+}
+.index-job-page image {
+  display: block;
+  width: 690rpx;
+  margin: 0 auto;
+}
+.index-job-page .content-form {
+  margin: 40rpx auto 0;
+}
+.index-job-page .index-job-content01 {
+  height: 376rpx;
+  margin-top: 40rpx;
+}
+.index-job-page .index-job-title02 {
+  width: 244rpx;
+  height: 68rpx;
+}
+.index-job-page .index-job-title03 {
+  width: 244rpx;
+  height: 68rpx;
+  margin-top: 74rpx;
+}
+.index-job-page .index-job-content03-01 {
+  height: 260rpx;
+  margin-top: 68rpx;
+}
+.index-job-page .index-job-content03-02 {
+  height: 260rpx;
+  margin-top: 56rpx;
+}
+.index-job-page .index-job-content03-03 {
+  height: 260rpx;
+  margin-top: 60rpx;
+}
+.index-job-page .index-job-title04 {
+  width: 244rpx;
+  height: 68rpx;
+  margin-top: 76rpx;
+}
+.index-job-page .index-job-content04-01 {
+  height: 280rpx;
+  margin-top: 46rpx;
+}
+.index-job-page .index-job-content04-02 {
+  height: 280rpx;
+  margin-top: 40rpx;
+}
+.index-job-page .index-job-content04-03 {
+  height: 280rpx;
+  margin-top: 40rpx;
+}
+.index-job-page .index-job-content04-04 {
+  height: 280rpx;
+  margin-top: 46rpx;
+}

@@ -1,0 +1,74 @@
+.index-lawyer-page {
+  padding-bottom: 142rpx;
+}
+.index-lawyer-page image {
+  display: block;
+  margin: 0 auto;
+}
+.index-lawyer-page .page-top {
+  width: 100%;
+  height: 816rpx;
+  background: #00C2C2;
+}
+.index-lawyer-page .page-top .lawyer-bg {
+  width: 100%;
+  height: 100%;
+}
+.index-lawyer-page .page-content {
+  position: relative;
+  padding-top: 148rpx;
+}
+.index-lawyer-page .page-content .content-ad {
+  position: absolute;
+  width: 734rpx;
+  height: 504rpx;
+  top: -360rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+.index-lawyer-page .page-content .content-form {
+  margin: 0 auto;
+}
+.index-lawyer-page .content-detail .index-lawyer-intro {
+  height: 240rpx;
+  margin-top: 30rpx;
+  width: 690rpx;
+}
+.index-lawyer-page .content-detail .index-lawyer-title {
+  width: 244rpx;
+  height: 68rpx;
+}
+.index-lawyer-page .content-detail .index-lawyer-title01 {
+  margin-top: 52rpx;
+}
+.index-lawyer-page .content-detail .index-lawyer-title02 {
+  margin-top: 62rpx;
+}
+.index-lawyer-page .content-detail .index-lawyer-title03 {
+  margin-top: 26rpx;
+}
+.index-lawyer-page .content-detail .index-lawyer-title04 {
+  margin-top: 56rpx;
+}
+.index-lawyer-page .content-detail .index-lawyer-content01 {
+  height: 630rpx;
+  width: 690rpx;
+  margin-top: 40rpx;
+}
+.index-lawyer-page .content-detail .index-lawyer-content02 {
+  width: 628rpx;
+  height: 716rpx;
+  margin-top: 18rpx;
+}
+.index-lawyer-page .content-detail .index-lawyer-content03 {
+  margin-top: 78rpx;
+}
+.index-lawyer-page .content-detail .index-lawyer-content04 {
+  margin-top: 66rpx;
+}
+.index-lawyer-page .content-detail .index-lawyer-content03,
+.index-lawyer-page .content-detail .index-lawyer-content04 {
+  width: 690rpx;
+  height: 220rpx;
+}

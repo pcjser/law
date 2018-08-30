@@ -1,0 +1,17 @@
+<view class="order-detail-page">
+  <view class="detail-content">
+    <view class="content-head">
+      <div class="order-type">找律师</div>
+      <div class="order-status">已完成/未服务</div>
+    </view>
+    <image class="content-line" src="http://47.105.60.162:81/order-line.png"></image>
+    <view class="content-main">
+      <view class="info-line">姓 名：张三</view>
+      <view class="info-line">手机号码：15109894567</view>
+      <view class="info-line">预约时间：2018-09-01 12:00:30</view>
+      <view class="info-line">服务网点：啦啦啦啦啦</view>
+      <view class="info-line">订单编号：45678956789</view>
+    </view>
+    <view class="content-op">取消订单/删除</view>
+  </view>
+</view>

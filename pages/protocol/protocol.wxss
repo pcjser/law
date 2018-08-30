@@ -1,0 +1,15 @@
+.protocol-page {
+  padding: 20rpx 30rpx;
+}
+.protocol-page .h1 {
+  font-size: 32rpx;
+  line-height: 90rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.protocol-page .block {
+  font-size: 26rpx;
+  line-height: 1.5;
+  text-indent: 52rpx;
+  padding: 5rpx 0;
+}

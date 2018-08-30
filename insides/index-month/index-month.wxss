@@ -1,0 +1,56 @@
+.index-month-page {
+  padding-bottom: 140rpx;
+}
+.index-month-page image {
+  display: block;
+  width: 690rpx;
+  margin: 0 auto;
+}
+.index-month-page .content-form {
+  margin: 40rpx auto 0;
+}
+.index-month-page .index-month-content01 {
+  height: 300rpx;
+  margin-top: 40rpx;
+}
+.index-month-page .index-month-content02 {
+  width: 674rpx;
+  height: 172rpx;
+  margin-top: 58rpx;
+}
+.index-month-page .index-month-title03 {
+  width: 244rpx;
+  height: 68rpx;
+  margin-top: 32rpx;
+}
+.index-month-page .index-month-content03 {
+  height: 528rpx;
+  margin-top: 40rpx;
+}
+.index-month-page .index-month-title04 {
+  width: 244rpx;
+  height: 68rpx;
+  margin-top: 60rpx;
+}
+.index-month-page .index-month-content04 {
+  width: 682rpx;
+  height: 628rpx;
+  margin-top: 40rpx;
+}
+.index-month-page .index-month-title05 {
+  width: 244rpx;
+  height: 68rpx;
+  margin-top: 66rpx;
+}
+.index-month-page .index-month-content05-01 {
+  height: 652rpx;
+  margin-top: 26rpx;
+}
+.index-month-page .index-month-content05-02 {
+  height: 386rpx;
+  margin-top: 40rpx;
+}
+.index-month-page .index-month-title06 {
+  width: 244rpx;
+  height: 68rpx;
+}

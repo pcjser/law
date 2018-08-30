@@ -1,0 +1,33 @@
+<view class="personal-about-page">
+  <view class="about-top">
+    <image class="logo" src="http://47.105.60.162:81/person-about-logo.png"></image>
+    <view class="company">用乎服务</view>
+    <view class="description">用乎服务是联合医药公司、保险公司、律师专业的综合服务平台</view>
+  </view>
+  <image class="about-desc" src="http://47.105.60.162:81/person-about-desc.png"></image>
+  <image class="about-ad" src="http://47.105.60.162:81/person-about-ad.png"></image>
+  <image class="about-slogan" src="http://47.105.60.162:81/person-about-slogan.png"></image>
+  <image class="about-icon" src="http://47.105.60.162:81/person-about-icon.png"></image>
+  <view class="content-block">
+    <image class="block-image" src="http://47.105.60.162:81/person-about-content01.png"></image>
+    <view class="block-text">
+      <view>给每位社员提</view>
+      <view>供法律服务保障</view>
+    </view>
+  </view>
+  <view class="content-block">
+    <view class="block-text">
+      <view>用福利保障社员</view>
+      <view>生活福利保障</view>
+    </view>
+    <image class="block-image" src="http://47.105.60.162:81/person-about-content02.png"></image>
+  </view>
+  <view class="content-block">
+    <image class="block-image" src="http://47.105.60.162:81/person-about-content03.png"></image>
+    <view class="block-text">
+      <view>让每位社员都能获</view>
+      <view>得生活与事业支持</view>
+    </view>
+  </view>
+  <view class="about-tips">必应服务，为老百姓提供保障平台</view>
+</view>

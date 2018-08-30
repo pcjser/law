@@ -1,0 +1,22 @@
+.personal-info-page {
+  min-height: 100vh;
+  background-color: #f2f5f5;
+}
+.personal-info-page .info-list {
+  padding-top: 20rpx;
+}
+.personal-info-page .info-list .info-item {
+  margin-bottom: 2rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88rpx;
+  font-size: 28rpx;
+  color: #333333;
+  background-color: #ffffff;
+  padding: 0 30rpx;
+  line-height: 1;
+}
+.personal-info-page .info-list .info-item .item-label {
+  color: #666666;
+}

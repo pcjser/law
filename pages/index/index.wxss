@@ -1,0 +1,82 @@
+.index-page .link {
+  width: 100%;
+  height: 100%;
+}
+.index-page .mb16 {
+  margin-bottom: 16rpx !important;
+}
+.index-page .mb22 {
+  margin-bottom: 22rpx !important;
+}
+.index-page .mb40 {
+  margin-bottom: 40rpx !important;
+}
+.index-page .mb44 {
+  margin-bottom: 44rpx !important;
+}
+.index-page .index-ad {
+  height: 576rpx;
+  background: #00c2c2;
+  position: relative;
+}
+.index-page .index-ad image {
+  width: 100%;
+  display: block;
+  height: 524rpx;
+  position: absolute;
+  bottom: 0;
+}
+.index-page .index-content {
+  position: relative;
+  padding-top: 218rpx;
+  padding-bottom: 30rpx;
+}
+.index-page .index-content .content-title {
+  color: #333333;
+  font-size: 34rpx;
+  padding: 0 30rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  font-weight: bold;
+}
+.index-page .index-content .content-item {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.index-page .index-content .content-item.item-company {
+  width: 738rpx;
+  height: 308rpx;
+  position: absolute;
+  top: -82rpx;
+  left: 0;
+  right: 0;
+}
+.index-page .index-content .content-item.item-01 {
+  height: 260rpx;
+}
+.index-page .index-content .content-item.item-02 {
+  height: 266rpx;
+}
+.index-page .index-content .content-item.item-03 {
+  height: 262rpx;
+}
+.index-page .index-content .content-item.item-04 {
+  height: 240rpx;
+}
+.index-page .index-content .content-item.item-05 {
+  height: 240rpx;
+}
+.index-page .index-content .content-item image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.index-page .index-content .content-tip {
+  color: #c1c1c1;
+  font-size: 26rpx;
+  height: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40rpx 0 0;
+}

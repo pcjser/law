@@ -1,0 +1,124 @@
+.user-form {
+  width: 690rpx;
+  margin: 0 auto;
+  box-shadow: 0 0 20rpx rgba(0, 194, 194, 0.12);
+  border-radius: 20rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-bottom: 25rpx;
+  .form-title {
+    width: 244rpx !important;
+    height: 68rpx;
+    display: block;
+    margin: 22rpx auto 44rpx;
+  }
+  .form-content {
+    width: 630rpx;
+    margin: 0 auto;
+    .input-line {
+      display: flex;
+      height: 87rpx;
+      background-color: #00c2c2;
+      font-size: 28rpx;
+      color: #ffffff;
+      border-radius: 6rpx;
+      align-items: center;
+      padding-left: 30rpx;
+      padding-right: 12rpx;
+      &+.input-line {
+        margin-top: 30rpx;
+      }
+      .label {
+        width: 112rpx;
+        text-align: right;
+      }
+      input {
+        height: 100%;
+        margin-left: 40rpx;
+        color: #000000;
+        flex: 1;
+      }
+      .icon-calendar {
+        width: 44rpx;
+        height: 44rpx;
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+  .form-protocol {
+    display: flex;
+    align-items: center;
+    font-size: 28rpx;
+    color: #666666;
+    margin-top: 23rpx;
+    .icon-choosed {
+      width: 44rpx;
+      height: 44rpx;
+      display: block;
+      margin: 0 14rpx 0 0;
+    }
+    view {
+      display: flex;
+      align-items: center;
+      margin-left: 6rpx;
+      .link {
+        color: #00c2c2;
+      }
+    }
+  }
+  .form-phone {
+    font-size: 28rpx;
+    color: #666666;
+    line-height: 40rpx;
+    margin-top: 30rpx;
+  }
+}
+
+.op-group {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  height: 100rpx;
+  box-shadow: 0 -4rpx 12rpx rgba(0, 194, 194, 0.1);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  left: 0;
+  .share::after {
+    border-radius: 0;
+    border: none;
+  }
+  .home,
+  .share,
+  .contact {
+    width: 192rpx;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999999;
+    font-size: 20rpx;
+    flex-direction: column;
+    outline: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    border-radius: 0;
+    image {
+      width: 44rpx;
+      height: 44rpx;
+      margin: 0;
+      margin-bottom: 6rpx;
+    }
+  }
+  .contact {
+    flex: 1;
+    background-color: #00c2c2;
+    color: #ffffff;
+    font-size: 28rpx;
+  }
+}

@@ -1,0 +1,21 @@
+<view class="order-page">
+  <view wx:if="{{loginStatus}}">
+    <view class="order-guide">
+      <view bindtap="changeType" data-type="activity" class="guide-item {{type === 'activity' && 'active'}}">活动报名</view>
+      <view bindtap="changeType" data-type="safe" class="guide-item {{type === 'safe' && 'active'}}">医药保险</view>
+      <view bindtap="changeType" data-type="lawyer" class="guide-item {{type === 'lawyer' && 'active'}}">法律律师</view>
+    </view>
+    <view class="order-list">
+      <navigator class="link" wx:for="{{dataList}}" wx:key="{{index}}" url="/insides/order-detail/order-detail?sn={{item}}" hover-class="none">
+        <view class="list-item">
+          <text class="item-title">某某某活动</text>
+          <text class="item-time">2018-5-20 12:20:3</text>
+          <image class="item-enter" src="http://47.105.60.162:81/enter.png" />
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="no-data" bindtap="login" wx:else>
+    <text>登录</text>后可查看订单列表
+  </view>
+</view>

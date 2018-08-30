@@ -1,0 +1,143 @@
+.person-page {
+  background-color: #f2f5f5;
+  min-height: 100vh;
+  .user-info {
+    padding-top: 24rpx;
+    padding-bottom: 40rpx;
+    text-align: center;
+    font-size: 34rpx;
+    color: #ffffff;
+    background-color: #00c2c2;
+    .user-avatar {
+      width: 148rpx;
+      height: 148rpx;
+      border-radius: 50%;
+      display: flex;
+      box-sizing: border-box;
+      border: 6rpx solid rgba(255, 255, 255, 0.9);
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .user-name {
+      height: 48rpx;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 24rpx;
+    }
+  }
+  .user-login {
+    background-color: #00c2c2;
+    overflow: hidden;
+    .login-btn {
+      box-sizing: border-box;
+      width: 330rpx;
+      height: 88rpx;
+      border: 2rpx solid #ffffff;
+      border-radius: 10rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34rpx;
+      color: #ffffff;
+      margin: 84rpx auto 120rpx;
+    }
+  }
+  .person-link {
+    margin-top: 20rpx;
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22rpx 0 30rpx;
+      height: 88rpx;
+      background-color: #ffffff;
+      margin-bottom: 2rpx;
+      line-height: 1;
+    }
+    .item-title {
+      font-size: 28rpx;
+      color: #333333;
+    }
+    .item-enter {
+      width: 44rpx;
+      height: 44rpx;
+    }
+  }
+  .component-login {
+    .mask {
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 1334rpx;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .login-box {
+      width: 640rpx;
+      height: 730rpx;
+      border-radius: 10rpx;
+      background-color: #ffffff;
+      position: fixed;
+      z-index: 4;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      .box-head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 34rpx;
+        color: #303030;
+        height: 44rpx;
+        position: relative;
+        padding: 36rpx 0 8rpx;
+        line-height: 1;
+        font-weight: bold;
+        .icon-close {
+          width: 44rpx;
+          height: 44rpx;
+          position: absolute;
+          right: 52rpx;
+        }
+      }
+      .box-content {
+        width: 520rpx;
+        margin: 0 auto;
+        .input-line {
+          border-bottom: 1rpx solid #dddddd;
+          height: 102rpx;
+          display: flex;
+          align-items: center;
+          font-size: 30rpx;
+          box-sizing: border-box;
+          input {
+            flex: 1
+          }
+          &+.input-line {
+            margin-top: 14rpx;
+          }
+          .send-code {
+            color: #00c2c2;
+          }
+        }
+        .button-line {
+          height: 88rpx;
+          margin-top: 60rpx;
+          .submit-btn {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30rpx;
+            color: #ffffff;
+            background-color: #00c2c2;
+            border-radius: 10rpx;
+          }
+        }
+      }
+    }
+  }
+}

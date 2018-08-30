@@ -1,0 +1,15 @@
+<view class="index-security-page">
+  <image class="index-security-content01" src="http://47.105.60.162:81/index-security-content01.png" />
+  <view class="content-form">
+    <uform></uform>
+  </view>
+  <image class="index-security-title03" src="http://47.105.60.162:81/title-fwhg.png" />
+  <image class="index-security-content03-01" src="http://47.105.60.162:81/index-security-content03-01.png" />
+  <image class="index-security-content03-02" src="http://47.105.60.162:81/index-security-content03-02.png" />
+  <image class="index-security-content03-03" src="http://47.105.60.162:81/index-security-content03-03.png" />
+  <image class="index-security-title04" src="http://47.105.60.162:81/title-fwys.png" />
+  <image class="index-security-content04" src="http://47.105.60.162:81/index-security-content04.png" />
+  <image class="index-security-title05" src="http://47.105.60.162:81/title-hxcp.png" />
+  <image class="index-security-content05-01" src="http://47.105.60.162:81/index-security-content05-01.png" />
+  <image class="index-security-content05-02" src="http://47.105.60.162:81/index-security-content05-02.png" />
+</view>

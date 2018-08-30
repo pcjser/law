@@ -1,0 +1,39 @@
+<view class="index-page">
+  <view class="index-ad">
+    <image src="http://47.105.60.162:81/index-ad.png" />
+  </view>
+  <view class="index-content">
+    <view class="content-item item-company">
+      <navigator class="link" url="/insides/index-company/index-company" hover-class="none">
+        <image src="http://47.105.60.162:81/index-company.png"></image>
+      </navigator>
+    </view>
+    <view class="content-title">福利计划</view>
+    <view class="content-item item-01 mb16">
+      <navigator class="link" url="/insides/index-lawyer/index-lawyer" hover-class="none">
+        <image src="http://47.105.60.162:81/index-content01.png"></image>
+      </navigator>
+    </view>
+    <view class="content-item item-02 mb22">
+      <navigator class="link" url="/insides/index-plan/index-plan" hover-class="none">
+        <image src="http://47.105.60.162:81/index-content02.png"></image>
+      </navigator>
+    </view>
+    <view class="content-item item-03 mb40">
+      <navigator class="link" url="/insides/index-life/index-life" hover-class="none">
+        <image src="http://47.105.60.162:81/index-content03.png"></image>
+      </navigator>
+    </view>
+    <view class="content-item item-04 mb44">
+      <navigator class="link" url="/insides/index-plan/index-plan" hover-class="none">
+        <image src="http://47.105.60.162:81/index-content04.png"></image>
+      </navigator>
+    </view>
+    <view class="content-item item-05">
+      <navigator class="link" url="/insides/index-month/index-month" hover-class="none">
+        <image src="http://47.105.60.162:81/index-content05.png"></image>
+      </navigator>
+    </view>
+    <view class="content-tip">用乎服务，为老百姓提供保障平台</view>
+  </view>
+</view>

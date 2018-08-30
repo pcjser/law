@@ -1,0 +1,64 @@
+.index-taxation-page {
+  padding-bottom: 170rpx;
+}
+.index-taxation-page image {
+  display: block;
+  width: 690rpx;
+  margin: 0 auto;
+}
+.index-taxation-page .content-form {
+  margin: 60rpx auto 0;
+}
+.index-taxation-page .index-taxation-content01 {
+  height: 260rpx;
+  margin-top: 40rpx;
+}
+.index-taxation-page .index-taxation-title02 {
+  width: 244rpx;
+  height: 68rpx;
+}
+.index-taxation-page .index-taxation-title03 {
+  width: 244rpx;
+  height: 68rpx;
+  margin-top: 58rpx;
+}
+.index-taxation-page .index-taxation-content03-01 {
+  width: 682rpx;
+  height: 218rpx;
+  margin-top: 14rpx;
+}
+.index-taxation-page .index-taxation-content03-02 {
+  width: 672rpx;
+  height: 238rpx;
+  margin-top: 10rpx;
+}
+.index-taxation-page .index-taxation-content03-03 {
+  width: 682rpx;
+  height: 238rpx;
+  margin-top: 20rpx;
+}
+.index-taxation-page .index-taxation-title04 {
+  margin-top: 64rpx;
+  width: 244rpx;
+  height: 68rpx;
+}
+.index-taxation-page .index-taxation-content04-01 {
+  width: 688rpx;
+  height: 280rpx;
+  margin-top: 27rpx;
+}
+.index-taxation-page .index-taxation-content04-02 {
+  width: 690rpx;
+  height: 280rpx;
+  margin-top: 41rpx;
+}
+.index-taxation-page .index-taxation-content04-03 {
+  width: 690rpx;
+  height: 280rpx;
+  margin-top: 46rpx;
+}
+.index-taxation-page .index-taxation-content04-04 {
+  width: 690rpx;
+  height: 280rpx;
+  margin-top: 41rpx;
+}

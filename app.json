@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/personal/personal",
+    "insides/order-detail/order-detail",
+    "insides/personal-info/personal-info",
+    "insides/personal-about/personal-about",
+    "insides/index-lawyer/index-lawyer",
+    "insides/index-plan/index-plan",
+    "insides/index-company/index-company",
+    "insides/index-life/index-life",
+    "insides/index-taxation/index-taxation",
+    "insides/index-job/index-job",
+    "insides/index-create/index-create",
+    "insides/index-security/index-security",
+    "insides/index-month/index-month",
+    "pages/protocol/protocol"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00C2C2",
+    "navigationBarTitleText": "用乎服务",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#00C2C2",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order-active.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "images/person.png",
+        "selectedIconPath": "images/person-active.png"
+      }
+    ]
+  }
+}

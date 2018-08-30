@@ -1,0 +1,52 @@
+<view class="user-form">
+  <image class="form-title" src="http://47.105.60.162:81/title-fwrxx.png" />
+  <view class="form-content">
+    <view class="input-line">
+      <text class="label">服 务 人</text>
+      <input type="text" bindinput="bindUserChange" placeholder-style="color:rgba(255,255,255,0.5)" placeholder="请输入真实姓名" value="{{user}}"
+      />
+    </view>
+    <view class="input-line" wx:if="{{showId}}">
+      <text class="label">身份证号</text>
+      <input type="idcard" bindinput="bindIdCardChange" placeholder-style="color:rgba(255,255,255,0.5)" placeholder="请输入身份证号码"
+        value="{{idcard}}" />
+    </view>
+    <view class="input-line">
+      <text class="label">手机号码</text>
+      <input type="number" bindinput="bindPhoneChange" placeholder-style="color:rgba(255,255,255,0.5)" placeholder="请输入手机号码" value="{{phone}}"
+      />
+    </view>
+    <view class="input-line">
+      <text class="label">预约时间</text>
+      <input type="text" placeholder-style="color:rgba(255,255,255,0.5)" placeholder="请选择预约时间" disabled="true" value="{{date}}"
+      />
+      <picker mode="date" bindchange="bindDateChange">
+        <image src="http://47.105.60.162:81/icon-calendar.png" class="icon-calendar" />
+      </picker>
+    </view>
+    <view class="input-line">
+      <text class="label">服务网点</text>
+      <input type="text" bindinput="bindAddressChange" placeholder-style="color:rgba(255,255,255,0.5)" placeholder="请输入网点全称" value="{{address}}"
+      />
+    </view>
+  </view>
+  <view class="form-protocol">
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox value="{{agree}}" checked="true" />
+    </checkbox-group>
+    <view>我已阅读《
+      <navigator class="link" url="/pages/protocol/protocol" hover-class="none">服务条款</navigator>》</view>
+  </view>
+  <view class="form-phone">服务电话：0551-65157175</view>
+  <view class="op-group">
+    <view class="home" bindtap="goHome">
+      <image src="http://47.105.60.162:81/home.png" />
+      <text>首页</text>
+    </view>
+    <button class="share" open-type="share">
+      <image src="http://47.105.60.162:81/share.png" />
+      <text>转发</text>
+    </button>
+    <view class="contact" bindtap="createOrder">下单咨询</view>
+  </view>
+</view>
