@@ -1,6 +1,5 @@
 .order-detail-page {
   padding-top: 20rpx;
-  background: red;
 }
 .order-detail-page .detail-content {
   width: 690rpx;

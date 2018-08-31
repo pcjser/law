@@ -1,4 +1,5 @@
 const util = require('../../utils/util');
+const app = getApp();
 // pages/order/order.js
 Page({
 
@@ -6,32 +7,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    type: 'activity',
-    dataList: [1, 2],
-    loginStatus: false
+    type: 'company',
+    dataList: null,
+    user: app.globalData.user
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // if(!this.loginStatus) {
-    //   console.log(111)
-    //   wx.switchTab({
-    //     url: '/pages/personal/personal'
-    //   })
-    // }
     wx.setNavigationBarTitle({
       title: '订单'
     })
-    const app = getApp()
-    const token = app.globalData.token
-    if (token) {
-      this.setData({
-        loginStatus: true
-      })
-    }
-    this.rendList();
   },
   changeType: function (e) {
     const type = e.currentTarget.dataset.type
@@ -42,7 +29,9 @@ Page({
   },
   rendList: function (e) {
     const type = this.data.type;
-    util.rendList(type, list => {
+    util.rendList({
+      type
+    }, list => {
       this.setData({
         dataList: list
       })
@@ -65,7 +54,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    const app = getApp();
+    this.setData({
+      user: app.globalData.user
+    })
+    this.rendList();
   },
 
   /**

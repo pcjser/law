@@ -19,4 +19,9 @@
       <image src="https://api.lawbing.com.cn/images/company-service04.png" />
     </navigator>
   </view>
+  <view class="service-block">
+    <navigator class="link" url="/insides/index-month/index-month" hover-class="none">
+      <image src="https://api.lawbing.com.cn/images/index-content05.png"></image>
+    </navigator>
+  </view>
 </view>

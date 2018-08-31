@@ -63,9 +63,6 @@
 .index-page .index-content .content-item.item-04 {
   height: 240rpx;
 }
-.index-page .index-content .content-item.item-05 {
-  height: 240rpx;
-}
 .index-page .index-content .content-item image {
   width: 100%;
   height: 100%;

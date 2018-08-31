@@ -8,6 +8,14 @@ Component({
     showId: {
       type: Boolean,
       value: false
+    },
+    type: {
+      type: String,
+      value: 'company'
+    },
+    service: {
+      type: String,
+      value: ''
     }
   },
 
@@ -15,7 +23,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    date: util.formatDate(new Date),
+    date: util.formatDate(new Date()),
     user: null,
     phone: null,
     address: null,
@@ -63,13 +71,22 @@ Component({
       })
     },
     createOrder: function () {
+      if (!this.data.agree) {
+        wx.showToast({
+          title: "请先同意服务条款",
+          icon: "none"
+        })
+        return false
+      }
       if (this.data.date && this.data.user && this.data.phone && this.data.address && ((this.data.showId && this.data.idcard) || (!this.data.showId && !this.data.idcard))) {
         util.postForm({
-          date: this.data.date,
-          user: this.data.user,
-          phone: this.data.phone,
-          address: this.data.address,
-          idcard: this.data.idcard
+          type: this.data.type,
+          service: this.data.service,
+          appointment: this.data.date,
+          realname: this.data.user,
+          mobile: this.data.phone,
+          outlet: this.data.address,
+          id_card: this.data.idcard
         }, () => {
           wx.showToast({
             title: "申请提交成功",

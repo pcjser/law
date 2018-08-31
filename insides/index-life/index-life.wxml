@@ -7,7 +7,7 @@
   <image class="index-life-content04-01" src="https://api.lawbing.com.cn/images/index-life-content04-01.png" />
   <image class="index-life-content04-02" src="https://api.lawbing.com.cn/images/index-life-content04-02.png" />
   <view class="content-form">
-    <uform></uform>
+    <uform type="safe" service="人寿险"></uform>
   </view>
   <image class="index-life-title06" src="https://api.lawbing.com.cn/images/title-fwys.png" />
   <image class="index-life-content06-01" src="https://api.lawbing.com.cn/images/index-life-content06-01.png" />

@@ -9,6 +9,6 @@
   <image class="index-month-content05-01" src="https://api.lawbing.com.cn/images/index-month-content05-01.png" />
   <image class="index-month-content05-02" src="https://api.lawbing.com.cn/images/index-month-content05-02.png" />
   <view class="content-form">
-    <uform show-id="true"></uform>
+    <uform show-id="true" service="月付呗"></uform>
   </view>
 </view>

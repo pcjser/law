@@ -1,11 +1,12 @@
 // insides/personal-info/personal-info.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    user: app.globalData.user
   },
 
   /**
@@ -28,7 +29,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    const app = getApp();
+    this.setData({
+      user: app.globalData.user
+    })
   },
 
   /**

@@ -29,11 +29,6 @@
         <image src="https://api.lawbing.com.cn/images/index-content04.png"></image>
       </navigator>
     </view>
-    <view class="content-item item-05">
-      <navigator class="link" url="/insides/index-month/index-month" hover-class="none">
-        <image src="https://api.lawbing.com.cn/images/index-content05.png"></image>
-      </navigator>
-    </view>
     <view class="content-tip">用乎服务，为老百姓提供保障平台</view>
   </view>
 </view>

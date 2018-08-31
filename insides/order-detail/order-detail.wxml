@@ -1,17 +1,17 @@
 <view class="order-detail-page">
   <view class="detail-content">
     <view class="content-head">
-      <div class="order-type">找律师</div>
-      <div class="order-status">已完成/未服务</div>
+      <div class="order-type">{{orderInfo.service}}</div>
+      <div class="order-status">{{orderInfo.state == 3 ? '已完成' : '未服务'}}</div>
     </view>
     <image class="content-line" src="https://api.lawbing.com.cn/images/order-line.png"></image>
     <view class="content-main">
-      <view class="info-line">姓 名：张三</view>
-      <view class="info-line">手机号码：15109894567</view>
-      <view class="info-line">预约时间：2018-09-01 12:00:30</view>
-      <view class="info-line">服务网点：啦啦啦啦啦</view>
-      <view class="info-line">订单编号：45678956789</view>
+      <view class="info-line">姓 名：{{orderInfo.realname}}</view>
+      <view class="info-line">手机号码：{{orderInfo.mobile}}</view>
+      <view class="info-line">预约时间：{{orderInfo.appointment}}</view>
+      <view class="info-line">服务网点：{{orderInfo.outlet}}</view>
+      <view class="info-line">订单编号：{{orderInfo.tx}}</view>
     </view>
-    <view class="content-op">取消订单/删除</view>
+    <view class="content-op" bindtap="opOrder">{{orderInfo.state == 0 ? '取消订单' : orderInfo.state == 2 ? '已取消' : orderInfo.state == 3 ? '删除' : '进行中'}}</view>
   </view>
 </view>

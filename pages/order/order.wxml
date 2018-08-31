@@ -1,21 +1,32 @@
 <view class="order-page">
-  <view wx:if="{{loginStatus}}">
+  <view wx:if="{{user.mobile}}">
     <view class="order-guide">
-      <view bindtap="changeType" data-type="activity" class="guide-item {{type === 'activity' && 'active'}}">活动报名</view>
-      <view bindtap="changeType" data-type="safe" class="guide-item {{type === 'safe' && 'active'}}">医药保险</view>
-      <view bindtap="changeType" data-type="lawyer" class="guide-item {{type === 'lawyer' && 'active'}}">法律律师</view>
+      <view bindtap="changeType" data-type="company" class="guide-item {{type === 'company' && 'active'}}">
+        企业服务
+      </view>
+      <view bindtap="changeType" data-type="safe" class="guide-item {{type === 'safe' && 'active'}}">
+        医药保险
+      </view>
+      <view bindtap="changeType" data-type="lawyer" class="guide-item {{type === 'lawyer' && 'active'}}">
+        法律律师
+      </view>
     </view>
-    <view class="order-list">
-      <navigator class="link" wx:for="{{dataList}}" wx:key="{{index}}" url="/insides/order-detail/order-detail?sn={{item}}" hover-class="none">
+    <view class="order-list" wx:if="{{dataList.length > 0}}">
+      <navigator class="link" wx:for="{{dataList}}" wx:key="{{index}}" url="/insides/order-detail/order-detail?detail={{item.detail}}" hover-class="none">
         <view class="list-item">
-          <text class="item-title">某某某活动</text>
-          <text class="item-time">2018-5-20 12:20:3</text>
+          <text class="item-title">{{item.service}}</text>
+          <text class="item-time">{{item.appointment}}</text>
           <image class="item-enter" src="https://api.lawbing.com.cn/images/enter.png" />
         </view>
       </navigator>
     </view>
+    <view class="no-list" wx:if="{{dataList.length === 0}}">
+      <image src="../../images/no-data.png" alt="" />
+      <view class="text">您还没有相关订单</view>
+    </view>
   </view>
   <view class="no-data" bindtap="login" wx:else>
-    <text>登录</text>后可查看订单列表
+    <text>登录</text>
+    后可查看订单列表
   </view>
 </view>

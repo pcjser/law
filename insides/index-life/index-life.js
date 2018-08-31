@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '医药保险保障计划'
+      title: '人寿险'
     })
   },
 

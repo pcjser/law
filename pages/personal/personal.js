@@ -1,4 +1,5 @@
 const util = require('../../utils/util.js');
+const app = getApp();
 let timer = null;
 
 // pages/person/person.js
@@ -8,13 +9,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    session: null,
-    init: false,
+    sessionid: '',
+    init: app.globalData.init,
     showLogin: false,
-    phone: null,
-    code: null,
-    name: null,
-    recommend: null,
+    phone: '',
+    code: '',
+    name: '',
+    recommend: '',
     time: 60,
     interval: false
   },
@@ -23,16 +24,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const app = getApp();
     wx.setNavigationBarTitle({
       title: '我的'
     })
-    const session = app.globalData.session
-    if (session) {
-      this.setData({
-        session: session
-      })
-    }
   },
   goLogin: function () {
     this.setData({
@@ -57,11 +51,6 @@ Page({
           title: "验证码发送成功",
           icon: "success"
         })
-        // this.setData({
-        //   code: [1, 2, 3, 4, 5, 6].map(() => {
-        //     return Math.floor(Math.random() * 10)
-        //   }).join('')
-        // })
         this.startTimer();
       })
     } else {
@@ -115,38 +104,44 @@ Page({
   },
   login: function () {
     const app = getApp();
-    let init = false;
-    try {
-      var value = wx.getStorageSync('init')
-      if (value) {
-        init = true;
-        this.setData({
-          init: true
+    const init = app.globalData.init;
+    if (init) {
+      if (this.data.phone && this.data.code) {
+        util.login({
+          mobile: this.data.phone,
+          code: this.data.code
+        }, sessionid => {
+          this.setData({
+            sessionid: sessionid
+          })
+          this.closeLogin();
+        })
+      } else {
+        wx.showToast({
+          title: "请完善信息后登录",
+          icon: "none"
         })
       }
-    } catch (e) { }
-    if (this.data.phone && this.data.code && (!init && this.data.name)) {
-      util.login({
-        username: this.data.phone,
-        code: this.data.code,
-        realname: this.data.name,
-        recommend: this.data.recommend
-      }, session => {
-        try {
-          wx.setStorageSync('init', true)
-        } catch (e) {
-        }
-        this.setData({
-          session: session
-        })
-        app.globalData.session = session;
-        this.closeLogin();
-      })
     } else {
-      wx.showToast({
-        title: "请完善信息后登录",
-        icon: "none"
-      })
+      if (this.data.phone && this.data.code && this.data.name) {
+        util.register({
+          mobile: this.data.phone,
+          code: this.data.code,
+          realname: this.data.name,
+          referrer: this.data.recommend
+        }, sessionid => {
+          this.setData({
+            sessionid: sessionid,
+            init: true
+          })
+          this.closeLogin();
+        })
+      } else {
+        wx.showToast({
+          title: "请完善信息后注册",
+          icon: "none"
+        })
+      }
     }
   },
   /**
@@ -160,7 +155,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    const app = getApp();
+    const sessionid = wx.getStorageSync('sessionid')
+    sessionid && this.setData({
+      sessionid
+    })
   },
 
   /**

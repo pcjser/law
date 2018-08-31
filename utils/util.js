@@ -26,7 +26,37 @@ const formatNumber = n => {
 
 // 提交申请表单
 const postForm = (params, cb) => {
-  console.log(params);
+  const sessionid = wx.getStorageSync("sessionid");
+  let header = {};
+  if (sessionid) {
+    header = {
+      'content-type': 'application/x-www-form-urlencoded',
+      'cookie': sessionid
+    };
+  } else {
+    wx.showToast({
+      title: '请先去个人中心登录',
+      icon: 'none'
+    })
+    return false;
+  }
+  wx.request({
+    url: `${BASEURL}/order/create`,
+    data: params,
+    header,
+    method: 'POST',
+    success: res => {
+      const { data: { success } } = res;
+      if (success) {
+        cb()
+      } else {
+        wx.showToast({
+          title: "信息提交失败，请稍后再试",
+          icon: "none"
+        })
+      }
+    }
+  })
 }
 
 // 发送验证码
@@ -50,11 +80,38 @@ const sendCode = (params, cb) => {
 }
 
 // 用户注册
-// const register = (params, cb) => {
-//   wx.request({
-//     url: `${BASEURL}/auth/register`
-//   })
-// }
+const register = (params, cb) => {
+  wx.request({
+    url: `${BASEURL}/auth/register`,
+    data: params,
+    method: 'POST',
+    success: res => {
+      const { data: { success, payload } } = res;
+      if (success) {
+        wx.showToast({
+          title: "注册成功",
+          icon: "success"
+        })
+        // console.log(res.header["Set-Cookie"])
+        wx.setStorageSync("sessionid", res.header["Set-Cookie"])
+        wx.setStorageSync("init", true)
+        const app = getApp();
+        app.globalData.init = true;
+        app.globalData.user = {
+          mobile: payload.mobile,
+          realname: payload.realname,
+          referrer: payload.referrer
+        }
+        cb(res.header["Set-Cookie"])
+      } else {
+        wx.showToast({
+          title: "注册失败，请稍后再试",
+          icon: "none"
+        })
+      }
+    }
+  })
+}
 
 // 用户登录
 const login = (params, cb) => {
@@ -69,54 +126,134 @@ const login = (params, cb) => {
           title: "登录成功",
           icon: "success"
         })
-        console.log(res.header["Set-Cookie"])
-        // cb(ses)
+        // console.log(res.header["Set-Cookie"])
+        const app = getApp();
+        app.globalData.user = {
+          mobile: payload.mobile,
+          realname: payload.realname,
+          referrer: payload.referrer
+        }
+        wx.setStorageSync("sessionid", res.header["Set-Cookie"])
+        cb(res.header["Set-Cookie"])
       } else {
         wx.showToast({
           title: "登录失败，请稍后再试",
           icon: "none"
         })
       }
-      // console.log(res)
-
-      // wx.setStorageSync("sessionid", res.header["Set-Cookie"])
-      // const token = res.data || 'testToken';
-      // wx.showToast({
-      //   title: "登录成功",
-      //   icon: "success"
-      // })
-      // try {
-      //   wx.setStorageSync('token', token)
-      // } catch (e) {}
-      // cb(token)
     }
   })
 }
 
-// token登录
-const tokenLogin = (params, cb) => {
+// 获取用户信息
+
+const profile = () => {
+  const sessionid = wx.getStorageSync("sessionid");
+  let header = {};
+  if (sessionid) {
+    header = {
+      'content-type': 'application/x-www-form-urlencoded',
+      'cookie': sessionid
+    };
+  }
   wx.request({
-    url: 'https://47.105.60.162:8083/bes/login/mini/token',
-    data: params,
+    url: `${BASEURL}/user/profile`,
     method: 'POST',
+    header,
     success: res => {
-      const token = res.data || 'testToken';
-      try {
-        wx.setStorageSync('token', token)
-      } catch (e) { }
-      cb(token)
+      const { data: { success, payload } } = res;
+      if (success) {
+        const app = getApp();
+        app.globalData.user = {
+          mobile: payload.mobile,
+          realname: payload.realname,
+          referrer: payload.referrer
+        }
+      } else {
+        wx.removeStorageSync('sessionid')
+      }
     }
   })
 }
 
 // 用户订单列表
 const rendList = (params, cb) => {
-  cb([1, 2, 3])
+  const sessionid = wx.getStorageSync("sessionid");
+  let header = {};
+  if (sessionid) {
+    header = {
+      'content-type': 'application/x-www-form-urlencoded',
+      'cookie': sessionid
+    };
+  }
+  wx.request({
+    url: `${BASEURL}/order/query`,
+    method: 'POST',
+    header,
+    data: params,
+    success: res => {
+      const { data: { success, payload } } = res;
+      if (success) {
+        const list = payload.map(data => {
+          const newData = Object.assign({}, data, {
+            appointment: data.appointment.split("T")[0]
+          })
+          return Object.assign({}, newData, {
+            detail: JSON.stringify(newData)
+          })
+        })
+        cb(list)
+      }
+    }
+  })
 }
 
-// 订单详情
-const orderDetail = (params, cb) => {
-  cb({})
+// 取消订单
+const cancelOrder = (params, cb) => {
+  const sessionid = wx.getStorageSync("sessionid");
+  let header = {};
+  if (sessionid) {
+    header = {
+      'content-type': 'application/x-www-form-urlencoded',
+      'cookie': sessionid
+    };
+  }
+  wx.request({
+    url: `${BASEURL}/order/cancel`,
+    method: 'POST',
+    header,
+    data: params,
+    success: res => {
+      const { data: { success } } = res;
+      if (success) {
+        cb()
+      }
+    }
+  })
+}
+
+// 删除订单
+const deleteOrder = (params, cb) => {
+  const sessionid = wx.getStorageSync("sessionid");
+  let header = {};
+  if (sessionid) {
+    header = {
+      'content-type': 'application/x-www-form-urlencoded',
+      'cookie': sessionid
+    };
+  }
+  wx.request({
+    url: `${BASEURL}/order/delete`,
+    method: 'POST',
+    header,
+    data: params,
+    success: res => {
+      const { data: { success } } = res;
+      if (success) {
+        cb()
+      }
+    }
+  })
 }
 
 module.exports = {
@@ -125,7 +262,9 @@ module.exports = {
   postForm: postForm,
   sendCode: sendCode,
   login: login,
-  tokenLogin: tokenLogin,
+  register: register,
+  profile: profile,
   rendList: rendList,
-  orderDetail: orderDetail
+  cancelOrder: cancelOrder,
+  deleteOrder: deleteOrder
 }

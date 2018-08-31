@@ -77,7 +77,7 @@
 }
 .person-page .component-login .login-box {
   width: 640rpx;
-  height: 730rpx;
+  padding-bottom: 42rpx;
   border-radius: 10rpx;
   background-color: #ffffff;
   position: fixed;

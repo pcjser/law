@@ -9,7 +9,7 @@
       <image class="index-plan-title01" src="https://api.lawbing.com.cn/images/index-plan-title01.png" />
       <image class="index-plan-content01" src="https://api.lawbing.com.cn/images/index-plan-content01.png"></image>
       <view class="content-form">
-        <uform></uform>
+        <uform type="safe" service="公益社区法律保障计划"></uform>
       </view>
       <image class="index-plan-title03" src="https://api.lawbing.com.cn/images/index-plan-title03.png"></image>
       <image class="index-plan-content03-01" src="https://api.lawbing.com.cn/images/index-plan-content03-01.png"></image>

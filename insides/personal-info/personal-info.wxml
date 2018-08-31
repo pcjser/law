@@ -2,15 +2,15 @@
   <view class="info-list">
     <view class="info-item">
       <text class="item-label">姓名</text>
-      <text class="item-text">张三</text>
+      <text class="item-text">{{user.realname}}</text>
     </view>
     <view class="info-item">
       <text class="item-label">手机号</text>
-      <text class="item-text">15198906756</text>
+      <text class="item-text">{{user.mobile}}</text>
     </view>
     <view class="info-item">
       <text class="item-label">推荐人</text>
-      <text class="item-text"></text>
+      <text class="item-text">{{user.referrer ? user.referrer : '无'}}</text>
     </view>
   </view>
 </view>

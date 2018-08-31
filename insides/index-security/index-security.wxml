@@ -1,7 +1,7 @@
 <view class="index-security-page">
   <image class="index-security-content01" src="https://api.lawbing.com.cn/images/index-security-content01.png" />
   <view class="content-form">
-    <uform></uform>
+    <uform service="员工社保"></uform>
   </view>
   <image class="index-security-title03" src="https://api.lawbing.com.cn/images/title-fwhg.png" />
   <image class="index-security-content03-01" src="https://api.lawbing.com.cn/images/index-security-content03-01.png" />

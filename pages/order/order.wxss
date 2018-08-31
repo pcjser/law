@@ -38,6 +38,9 @@
 .order-page .order-list {
   padding-top: 20rpx;
 }
+.order-page .order-list .link + .link {
+  margin-top: 3rpx;
+}
 .order-page .order-list .list-item {
   display: flex;
   align-items: center;
@@ -45,7 +48,6 @@
   background-color: #ffffff;
   padding: 0 22rpx 0 30rpx;
   justify-content: flex-end;
-  margin-bottom: 2rpx;
   line-height: 1;
 }
 .order-page .order-list .list-item .item-title {
@@ -60,6 +62,24 @@
 .order-page .order-list .list-item .item-enter {
   width: 44rpx;
   height: 44rpx;
+}
+.order-page .no-list {
+  padding-top: 200rpx;
+}
+.order-page .no-list image {
+  width: 304rpx;
+  height: 304rpx;
+  margin: 0 auto;
+  display: block;
+}
+.order-page .no-list .text {
+  color: #c1c1c1;
+  font-size: 26rpx;
+  height: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20rpx 0 0;
 }
 .order-page .no-data {
   display: flex;

@@ -5,7 +5,7 @@
   <view class="page-content">
     <image class="content-ad" src="https://api.lawbing.com.cn/images/index-lawyer-ad.png" />
     <view class="content-form">
-      <uform></uform>
+      <uform type="lawyer" service="找律师"></uform>
     </view>
     <view class="content-detail">
       <image class="index-lawyer-intro" src="https://api.lawbing.com.cn/images/index-lawyer-intro.png" />
