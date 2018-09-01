@@ -26,33 +26,53 @@ Page({
     const tx = this.data.orderInfo.tx;
     if (state == 0) {
       // 取消
-      util.cancelOrder({
-        tx
-      }, () => {
-        wx.showToast({
-          title: '订单取消成功',
-          icon: 'success'
-        });
-        this.setData({
-          orderInfo: Object.assign({}, this.data.orderInfo, {
-            state: 2
-          })
-        })
+      wx.showModal({
+        title: '提示',
+        content: '确定要取消订单吗？',
+        success: sm => {
+          if (sm.confirm) {
+            util.cancelOrder({
+              tx
+            }, () => {
+              wx.showToast({
+                title: '订单取消成功',
+                icon: 'success'
+              });
+              this.setData({
+                orderInfo: Object.assign({}, this.data.orderInfo, {
+                  state: 2
+                })
+              })
+            })
+          } else if (sm.cancel) {
+            console.log('用户点击取消！')
+          }
+        }
       })
     }
     if (state == 3) {
       // 删除
-      util.deleteOrder({
-        tx
-      }, () => {
-        wx.showToast({
-          title: '订单删除成功',
-          icon: 'success'
-        });
-        let timer = setTimeout(() => {
-          clearTimeout(timer);
-          wx.navigateBack();
-        }, 500)
+      wx.showModal({
+        title: '提示',
+        content: '确定要删除订单吗？',
+        success: sm => {
+          if (sm.confirm) {
+            util.deleteOrder({
+              tx
+            }, () => {
+              wx.showToast({
+                title: '订单删除成功',
+                icon: 'success'
+              });
+              let timer = setTimeout(() => {
+                clearTimeout(timer);
+                wx.navigateBack();
+              }, 500)
+            })
+          } else if (sm.cancel) {
+            console.log('用户点击取消！')
+          }
+        }
       })
     }
   },
